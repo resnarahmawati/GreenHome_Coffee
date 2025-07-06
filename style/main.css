@@ -713,22 +713,27 @@ footer .footer-right-akhir .social-icons a.instagram {
   nav {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 55px;
     left: 0;
     width: 100%;
     background-color: #27342c;
     padding: 1rem 0;
     text-align: center;
     flex-direction: column;
+    max-width: 100%; /* Pastikan navbar tidak lebih lebar dari layar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan untuk efek visual */
   }
 
   nav ul {
     flex-direction: column;
+    padding: 0; /* Hapus padding default */
+    margin: 0; /* Hapus margin default */
   }
 
   nav ul li {
     display: block;
     margin: 0.5rem 0;
+    width: 100%; /* Pastikan setiap item mengambil lebar penuh */
   }
 
   nav.show {
@@ -739,7 +744,8 @@ footer .footer-right-akhir .social-icons a.instagram {
   nav a {
     padding: 10px;
     justify-content: center;
-    width: 100%;
+    width: 100%; /* Pastikan link mengambil lebar penuh */
+    box-sizing: border-box; /* Pastikan padding tidak mempengaruhi lebar */
   }
   
   /* Hilangkan garis vertikal di mobile */
@@ -834,6 +840,7 @@ footer .footer-right-akhir .social-icons a.instagram {
   .coffee-cards {
     margin-right: 50px;
   }
+  
   .btn {
     font-size: 14px;
     padding: 8px 15px;
