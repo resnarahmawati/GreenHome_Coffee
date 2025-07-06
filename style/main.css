@@ -694,9 +694,15 @@ footer .footer-right-akhir .social-icons a.instagram {
   -webkit-text-fill-color: transparent;
 }
 
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
-  /* Header dan Logo menjadi lebih compact */
   header {
     padding: 0 15px;
     height: 60px;
@@ -713,59 +719,65 @@ footer .footer-right-akhir .social-icons a.instagram {
   nav {
     display: none;
     position: absolute;
-    top: 55px;
+    top: 60px;
     left: 0;
     width: 100%;
     background-color: #27342c;
     padding: 1rem 0;
     text-align: center;
     flex-direction: column;
-    max-width: 100%; /* Pastikan navbar tidak lebih lebar dari layar */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan untuk efek visual */
+    max-width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
 
   nav ul {
     flex-direction: column;
-    padding: 0; /* Hapus padding default */
-    margin: 0; /* Hapus margin default */
+    padding: 0;
+    margin: 0;
   }
 
   nav ul li {
     display: block;
     margin: 0.5rem 0;
-    width: 100%; /* Pastikan setiap item mengambil lebar penuh */
+    width: 100%;
   }
 
   nav.show {
     display: flex;
   }
   
-  /* Tata letak link nav di mobile */
   nav a {
     padding: 10px;
     justify-content: center;
-    width: 100%; /* Pastikan link mengambil lebar penuh */
-    box-sizing: border-box; /* Pastikan padding tidak mempengaruhi lebar */
+    width: 100%;
   }
   
-  /* Hilangkan garis vertikal di mobile */
   nav a:not(:last-child)::after {
     display: none;
   }
   
-  /* Tampilkan nav ketika aktif */
   nav.active {
     display: flex;
   }
   
-  /* Penyesuaian layout utama */
   .main-section {
-    padding-top: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px 20px; /* Sesuaikan padding jika perlu */
+  }
+  
+  .left-content,
+  .right-content {
+    margin: 0;
+    padding: 0;
+    flex: 1 1 100%; /* Pastikan elemen mengambil lebar penuh */
+    max-width: 100%;
   }
   
   .right-content {
+    position: relative;
+    display: flex;
     justify-content: center;
     margin-top: 30px;
   }
@@ -775,7 +787,6 @@ footer .footer-right-akhir .social-icons a.instagram {
     height: 250px;
   }
   
-  /* Bottom section responsif */
   .bottom-section {
     padding: 20px;
   }
@@ -790,7 +801,6 @@ footer .footer-right-akhir .social-icons a.instagram {
     height: 60px;
   }
   
-  /* About section responsif */
   .about-section {
     flex-direction: column;
     padding: 40px 20px;
@@ -815,7 +825,6 @@ footer .footer-right-akhir .social-icons a.instagram {
     font-size: 32px;
   }
   
-  /* Footer responsif */
   .footer-left, .footer-right {
     flex: 1 1 100%;
     text-align: center;
@@ -829,18 +838,34 @@ footer .footer-right-akhir .social-icons a.instagram {
 
 /* Breakpoint lebih kecil untuk beberapa penyesuaian tambahan */
 @media (max-width: 480px) {
+  .bottom-section{
+    padding: 5px 0px 0px 0px;
+  }
+  .feature-item {
+    padding: 20px 20px 0px 20px
+  }
+  .bottom-right {
+    padding: 50px;
+  }
   .left-content h1 {
     font-size: 28px;
   }
+  main {
+    padding: 0 20px 0px 35px;
+  }
+  .about-text {
+    margin-top: 150px;
+  }
   
   .features-list li {
-    font-size: 14px;
+    font-size: 18px;
   }
-  
+  .coffee-label {
+    font-size: 40px;
+  }
   .coffee-cards {
-    margin-right: 50px;
+    padding-right: 50px;
   }
-  
   .btn {
     font-size: 14px;
     padding: 8px 15px;
